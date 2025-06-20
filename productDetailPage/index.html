@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>商品資訊 | PETSLOVE</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/styleProductDetail.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav-placeholder" style="height: 160px;"></div>
+
+    <!-- product detail -->
+    <section id="product-detail" class="container">
+      <!-- category -->
+      <aside class="category">
+        <p class="label">商品分類</p>
+        <button class="btn primary active">全部商品</button>
+        <button class="btn primary">熱銷商品</button>
+      </aside>
+
+      <!-- product -->
+      <div class="product-block">
+        <div class="card-wrapper">
+          <div class="card-img">
+            <img src="../assets/images/productPic1.png" alt="" />
+          </div>
+          <div class="card-info">
+            <div class="desc discount">
+              <p class="bodyEmphasis">馬克杯</p>
+              <span class="label price">$360</span>
+              <span class="bodyEmphasis discount-price">$250</span>
+            </div>
+            <div class="btn-counter">
+              <button class="btn secondary">
+                <iconify-icon
+                  icon="ic:round-minus"
+                  class="icon-minus"
+                ></iconify-icon>
+              </button>
+              <span class="count">12</span>
+              <button class="btn secondary">
+                <iconify-icon
+                  icon="ic:round-plus"
+                  class="icon-plus"
+                ></iconify-icon>
+              </button>
+              <span class="label">還剩18件</span>
+            </div>
+            <button class="btn primary">加入購物車</button>
+            <div class="social-link">
+              <span class="label">分享至:</span>
+              <iconify-icon
+                icon="ic:baseline-facebook"
+                class="icon"
+              ></iconify-icon>
+              <iconify-icon
+                icon="mingcute:ins-fill"
+                class="icon"
+              ></iconify-icon>
+              <iconify-icon
+                icon="mingcute:threads-line"
+                class="icon"
+              ></iconify-icon>
+            </div>
+          </div>
+        </div>
+        <div class="label divider">商品資訊</div>
+        <img src="../assets/images/productDetailPic1.png" alt="">
+      </div>
+    </section>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <!-- script -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script type="module" src="./js/scriptProductDetail.js"></script>
+  </body>
+</html>

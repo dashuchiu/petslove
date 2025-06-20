@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>動物領養 | PETSLOVE</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/styleProduct.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav-placeholder" style="height: 160px;"></div>
+
+    <!-- product block -->
+    <main id="product-block" class="container">
+      <!-- switch view -->
+      <div class="switch-view">
+        <iconify-icon
+          icon="ion:grid"
+          width="28"
+          height="28"
+          class="icon-grid active"
+          data-mode="grid"
+        ></iconify-icon>
+
+        <iconify-icon
+          icon="ion:list"
+          width="40"
+          height="40"
+          class="icon-list"
+          data-mode="list"
+        ></iconify-icon>
+      </div>
+
+      <section class="content">
+        <!-- category -->
+        <aside class="category">
+          <p class="label">商品分類</p>
+          <button class="btn primary active">全部商品</button>
+          <button class="btn primary">熱銷商品</button>
+        </aside>
+        <!-- product card-->
+        <div class="card-list">
+          <div class="card-wrapper grid">
+            <div class="spinner"></div>
+            <a href="../productDetailPage/index.html" class="default-card">
+              <div class="card-img">
+                <img src="/assets/images/productPic1.png" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="desc discount">
+                  <p class="bodyEmphasis">馬克杯</p>
+                  <span class="label price">$360</span>
+                  <span class="label discount-price">$250</span>
+                </div>
+                <iconify-icon
+                  icon="tabler:arrow-up-right"
+                  class="arrow-up-right"
+                ></iconify-icon>
+              </div>
+              <iconify-icon
+                icon="ic:round-plus"
+                class="round-plus"
+                onclick="event.preventDefault(); event.stopPropagation();"
+              ></iconify-icon>
+            </a>
+            <a href="#!" class="default-card">
+              <div class="card-img">
+                <img src="/assets/images/productPic2.png" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="desc discount">
+                  <p class="bodyEmphasis">隨行杯</p>
+                  <span class="label price">$590</span>
+                  <span class="label discount-price">$200</span>
+                </div>
+                <iconify-icon
+                  icon="tabler:arrow-up-right"
+                  class="arrow-up-right"
+                ></iconify-icon>
+              </div>
+              <iconify-icon
+                icon="ic:round-plus"
+                class="round-plus"
+              ></iconify-icon>
+            </a>
+            <a href="#!" class="default-card">
+              <div class="card-img">
+                <img src="/assets/images/productPic3.png" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="desc">
+                  <p class="bodyEmphasis">遮陽帽</p>
+                  <span class="label price">$280</span>
+                  <span class="label discount-price">$9999</span>
+                </div>
+                <iconify-icon
+                  icon="tabler:arrow-up-right"
+                  class="arrow-up-right"
+                ></iconify-icon>
+              </div>
+              <iconify-icon
+                icon="ic:round-plus"
+                class="round-plus"
+              ></iconify-icon>
+            </a>
+            <a href="#!" class="default-card">
+              <div class="card-img">
+                <img src="/assets/images/productPic4.png" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="desc">
+                  <p class="bodyEmphasis">2026桌曆</p>
+                  <span class="label price">$180</span>
+                  <span class="label discount-price">$9999</span>
+                </div>
+                <iconify-icon
+                  icon="tabler:arrow-up-right"
+                  class="arrow-up-right"
+                ></iconify-icon>
+              </div>
+              <iconify-icon
+                icon="ic:round-plus"
+                class="round-plus"
+              ></iconify-icon>
+            </a>
+            <a href="#!" class="default-card">
+              <div class="card-img">
+                <img src="/assets/images/productPic5.png" alt="" />
+              </div>
+              <div class="card-info">
+                <div class="desc">
+                  <p class="bodyEmphasis">購物袋</p>
+                  <span class="label price">$250</span>
+                  <span class="label discount-price">$9999</span>
+                </div>
+                <iconify-icon
+                  icon="tabler:arrow-up-right"
+                  class="arrow-up-right"
+                ></iconify-icon>
+              </div>
+              <iconify-icon
+                icon="ic:round-plus"
+                class="round-plus"
+              ></iconify-icon>
+            </a>
+          </div>
+          <!-- pagination -->
+          <div class="pagination">
+            <iconify-icon
+              icon="icon-park-outline:left"
+              width="40"
+              height="40"
+              class="arrow-prev"
+            ></iconify-icon>
+            <span class="btn primary active">1</span>
+            <span class="btn secondary">2</span>
+            <iconify-icon
+              icon="icon-park-outline:right"
+              width="40"
+              height="40"
+              class="arrow-next"
+            ></iconify-icon>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+  </body>
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  <script type="module" src="./js/scriptProduct.js"></script>
+</html>

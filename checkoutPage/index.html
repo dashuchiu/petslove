@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>結帳 | PETSLOVE</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/styleCheckout.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav-placeholder" style="height: 160px;"></div>
+
+    <!-- checkout-list -->
+    <section id="cart-block" class="container">
+      <h3 class="subTitle">商品明細</h3>
+      <div class="cart-header">
+        <span class="label w-2">商品</span>
+        <span class="label w-2">價格</span>
+        <span class="label w-2">數量</span>
+        <span class="label w-1">小計</span>
+      </div>
+      <ul class="cart-list">
+        <li class="cart-item">
+          <div class="card-img w-1">
+            <img src="/assets/images/productPic1.png" alt="" />
+          </div>
+          <span class="bodyEmphasis w-1">馬克杯</span>
+          <div class="desc discount w-2">
+            <span class="label price">$360</span>
+            <span class="bodyEmphasis discount-price">$250</span>
+          </div>
+          <div class="btn-counter w-2">
+            <span class="count">12</span>
+          </div>
+          <span class="bodyEmphasis total w-1">$2500</span>
+        </li>
+        <li class="cart-item">
+          <div class="card-img w-1">
+            <img src="/assets/images/productPic4.png" alt="" />
+          </div>
+          <span class="bodyEmphasis w-1">2026桌曆</span>
+          <div class="desc w-2">
+            <span class="label price">$180</span>
+            <span class="bodyEmphasis discount-price">$250</span>
+          </div>
+          <div class="btn-counter w-2">
+            <span class="count">12</span>
+          </div>
+          <span class="bodyEmphasis total w-1">$2500</span>
+        </li>
+      </ul>
+      <div class="cart-footer">
+        <span class="label">消費金額:<span class="amount">$750</span></span>
+        <div class="label fee">運費:<span>運費$100</span></div>
+        <span class="bodyEmphasis">總金額:<span class="total">$850</span></span>
+      </div>
+    </section>
+
+    <!-- payment block -->
+    <section id="payment-block" class="container">
+      <h3 class="subTitle">商品明細</h3>
+      <div class="item">
+        <input type="radio" name="payment" id="visa" />
+        <label for="visa">信用卡線上付款</label>
+      </div>
+      <div class="item">
+        <input type="radio" name="payment" id="linepay" />
+        <label for="linepay">Line Pay</label>
+      </div>
+    </section>
+
+    <!-- receiver block -->
+    <form id="receiver-block" class="container">
+      <h3 class="subTitle">收件地址</h3>
+      <input type="text" class="ipt" placeholder="收件姓名">
+      <input type="tel" class="ipt" placeholder="手機號碼">
+      <input type="email" class="ipt" placeholder="聯絡信箱">
+      <input type="text" class="ipt" placeholder="收件地址">
+      <button type="button" class="btn primary">確定付款</button>
+    </form>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script type="module" src="./js/scriptCheckout.js"></script>
+  </body>
+</html>

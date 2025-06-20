@@ -1,0 +1,178 @@
+@use "../../styles/base" as *;
+@use "../../layout/styles/nav" as *;
+@use "../../layout/styles/footer" as *;
+
+#feed-detail {
+  display: flex;
+  margin-bottom: 64px;
+
+  .pet-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .card-wrapper {
+      display: flex;
+      gap: 16px;
+      .card-img {
+        width: 60%;
+
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        border: none;
+        img {
+          border: 2px solid $primaryColor50;
+          border-radius: 20px;
+          &:nth-child(1) {
+            grid-row: span 2;
+            grid-column: span 2;
+          }
+          &:nth-child(2) {
+            grid-row: 1;
+            grid-column: 3;
+          }
+          &:nth-child(3) {
+            grid-row: 2;
+            grid-column: 3;
+          }
+        }
+      }
+      .card-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 12px;
+        background-color: transparent;
+        .desc {
+          flex: 1;
+          .subTitle {
+            color: $textPrimary;
+          }
+          .label {
+            color: $textSecondary;
+          }
+        }
+
+        .progressbar {
+          background-image: conic-gradient($primaryColor40 0%, $grayColor20 0%);
+          width: 50%;
+          aspect-ratio: 1 / 1;
+          border-radius: 50%;
+          margin: 12px auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          animation: progressRun 2s ease forwards;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 95%;
+            height: 95%;
+            background-color: $bgColor;
+            border-radius: 50%;
+          }
+          & > * {
+            z-index: 9;
+          }
+          .subTitle {
+            color: $textBrand;
+          }
+          .label {
+            color: $textSecondary;
+            font-size: clamp(12px, 1.5vw, 14px);
+          }
+        }
+
+        .social-link {
+          color: $textSecondary;
+
+          iconify-icon {
+            font-size: 32px;
+            vertical-align: middle;
+            cursor: pointer;
+            &:hover {
+              filter: brightness(1.2);
+            }
+          }
+        }
+      }
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      color: $textSecondary;
+      gap: 8px;
+      margin-bottom: 12px;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        flex: 1;
+        height: 1px;
+        background-color: $textSecondary;
+      }
+    }
+
+    .donate-list {
+      text-align: center;
+      color: $textSecondary;
+      td {
+        border: 1px solid $textSecondary;
+        padding: 8px 0;
+        &:first-child {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes progressRun {
+  0% {
+    background-image: conic-gradient($primaryColor40 0%, $grayColor20 0%);
+  }
+  100% {
+    background-image: conic-gradient($primaryColor40 65%, $grayColor20 0%);
+  }
+}
+
+@media (max-width: 768px) {
+  #feed-detail {
+    .pet-block {
+      .card-wrapper {
+        flex-direction: column;
+        .card-img {
+          width: 100%;
+        }
+        .card-info {
+          .progressbar {
+            width: min(100%, 200px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #feed-detail {
+    .pet-block {
+      .card-wrapper {
+        .card-img {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,142 @@
+@use "../../styles/base" as *;
+@use "../../layout/styles/nav" as *;
+@use "../../layout/styles/footer" as *;
+
+#pets-block {
+  margin-bottom: 64px;
+
+  .content {
+    display: flex;
+    .category {
+      display: flex;
+      flex-direction: column;
+      width: min(100%, 200px);
+      gap: 8px;
+      margin-right: 10%;
+
+      .label {
+        color: $textPrimary;
+      }
+      .btn {
+        background-color: $grayColor20;
+        &.active {
+          background-color: $grayColor80;
+          color: $textInvert;
+        }
+      }
+    }
+
+    .card-list {
+      width: 100%;
+      .card-wrapper {
+        &.grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          .default-card {
+            width: calc(100% / 3 - 20px);
+            .card-info {
+              .desc {
+                width: 50%;
+                flex: 1;
+                .subTitle {
+                  color: $textInvert;
+                }
+                .memo {
+                  height: 1lh;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .pagination {
+        text-align: center;
+        margin-top: 32px;
+        iconify-icon[class^="arrow"] {
+          color: $textSecondary;
+          vertical-align: middle;
+          cursor: pointer;
+
+          &:hover {
+            color: $textPrimary;
+          }
+        }
+        .btn {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          line-height: 40px;
+          border-radius: 50%;
+          border: none;
+          color: $textSecondary;
+          background-color: $grayColor20;
+          background-image: none;
+          cursor: pointer;
+          &.active {
+            background-color: $primaryColor50;
+            color: $textInvert;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #pets-block {
+    .content {
+      flex-direction: column;
+      gap: 32px;
+
+      .category {
+        width: 100%;
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .label {
+          width: 100%;
+        }
+        .btn {
+          width: min(100%, 100px);
+        }
+      }
+      .card-list {
+        .card-wrapper {
+          &.grid {
+            gap: 16px;
+            .default-card {
+              width: calc(100% / 2 - 8px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #pets-block {
+    .content {
+      .category {
+        .btn {
+          width: min(100%, 80px);
+        }
+      }
+      .card-list {
+        .card-wrapper {
+          &.grid {
+            .default-card {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

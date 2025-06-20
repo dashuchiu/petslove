@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>動物資訊 | PETSLOVE</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/styleAdoptionDetail.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <div id="nav-placeholder" style="height: 160px"></div>
+
+    <!-- pet detail -->
+    <section id="pet-detail" class="container">
+      <!-- category -->
+      <aside class="category">
+        <p class="label">動物分類</p>
+        <button class="btn primary active">貓</button>
+        <button class="btn primary">狗</button>
+        <button class="btn primary">其他</button>
+      </aside>
+
+      <!-- pet detail -->
+      <div class="pet-block">
+        <div class="card-wrapper">
+          <div class="card-img">
+            <img src="../assets/images/petsPic1.jpg" alt="" />
+          </div>
+          <div class="card-info">
+            <div class="desc">
+              <h3 class="subTitle">咪咪</h3>
+              <p class="label">女生</p>
+              <p class="label">2歲</p>
+              <p class="label">台北市</p>
+              <p class="label memo">喜歡摸摸、親人、不挑食、愛說話</p>
+            </div>
+            <p class="label notice">
+              <span>認養條件:</span>
+              <span>需要滿20歲</span>
+              <span>需要簽署認養同意書</span>
+            </p>
+            <button class="btn primary action">我想認養</button>
+            <div class="social-link">
+              <span class="label">分享至:</span>
+              <iconify-icon
+                icon="ic:baseline-facebook"
+                class="icon"
+              ></iconify-icon>
+              <iconify-icon
+                icon="mingcute:ins-fill"
+                class="icon"
+              ></iconify-icon>
+              <iconify-icon
+                icon="mingcute:threads-line"
+                class="icon"
+              ></iconify-icon>
+            </div>
+          </div>
+        </div>
+        <div class="label divider">動物說明</div>
+        <p class="note">
+          這是一隻個性溫馴、親人度滿分的虎斑貓，已習慣被抱抱、剪指甲，是個讓人省心的小寶貝。雖然偶爾有點小屁，但就是這樣的可愛個性讓人忍不住愛上他。 曾經流浪的生活讓他更需要安全感，也讓他特別黏人，渴望被全心全意地陪伴與呵護。 如果你正在找一位願意與你建立深厚連結、每天給你滿滿陪伴的毛孩子，他會是你最棒的選擇。希望未來的你，能給他一個穩定又充滿愛的家。
+        </p>
+        <img src="../assets/images/petsPic1-1.jpg" alt="" />
+        <img src="../assets/images/petsPic1-2.jpg" alt="" />
+      </div>
+    </section>
+
+    <!-- modal -->
+    <div class="modal adoption-form d-none">
+      <iconify-icon
+        icon="material-symbols:close-rounded"
+        width="28"
+        height="28"
+        class="close"
+      ></iconify-icon>
+      <div class="title-group">
+        <div class="subTitle">領養申請</div>
+        <div class="body">填寫申請表單，開始您的領養之旅</div>
+      </div>
+      <input type="text" class="ipt" placeholder="姓名" />
+      <input type="tel" class="ipt" placeholder="電話" />
+      <input type="email" class="ipt" placeholder="郵件" />
+      <a href="#!" class="btn primary submit">送出</a>
+    </div>
+
+    <!-- modal confirmation -->
+    <div class="modal confirm d-none">
+      <iconify-icon
+        icon="material-symbols:close-rounded"
+        width="28"
+        height="28"
+        class="close"
+      ></iconify-icon>
+      <div class="title-group">
+        <div class="subTitle">送出申請</div>
+        <div class="body">已送到您的領養需求</div>
+      </div>
+      <dotlottie-player
+        src="https://lottie.host/1f8ecf4c-087a-436e-8d31-b72db3c129bd/cLwnUfw3vY.lottie"
+        background="transparent"
+        speed="1"
+        style="width: 120px; height: 120px"
+        playMode="forward"
+        autoplay
+        class="check"
+      ></dotlottie-player>
+      <p class="label">我們將會在一天內與您聯絡</p>
+    </div>
+
+    <!-- footer -->
+    <div id="footer-placeholder"></div>
+    <!-- script -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <script type="module" src="./js/scriptAdotionDetail.js"></script>
+  </body>
+</html>

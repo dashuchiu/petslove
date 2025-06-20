@@ -1,0 +1,206 @@
+@use "../../styles/base" as *;
+@use "../../layout/styles/nav" as *;
+@use "../../layout/styles/footer" as *;
+
+/* product list */
+#product-block {
+  margin-bottom: 64px;
+
+  .switch-view {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 32px;
+
+    iconify-icon[class^="icon"] {
+      color: $grayColor20;
+      cursor: pointer;
+      vertical-align: middle;
+      &:hover {
+        color: $grayColor80;
+      }
+      &.active {
+        color: $grayColor80;
+      }
+    }
+  }
+  .content {
+    display: flex;
+    .category {
+      display: flex;
+      flex-direction: column;
+      width: min(100%, 200px);
+      gap: 8px;
+      margin-right: 10%;
+
+      .label {
+        color: $textPrimary;
+      }
+      .btn {
+        background-color: $grayColor20;
+        &.active {
+          background-color: $grayColor80;
+          color: $textInvert;
+        }
+      }
+    }
+
+    .card-list {
+      
+      width: 100%;
+      .card-wrapper {
+        &.grid {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          .default-card {
+            width: calc(100% / 3 - 20px);
+          }
+        }
+        &.list {
+          .default-card {
+            display: flex;
+            gap: 12px;
+            height: 200px;
+            &:not(:last-child) {
+              margin-bottom: 12px;
+            }
+
+            .card-info {
+              flex: 1;
+              padding: 24px;
+              .desc {
+                .bodyEmphasis {
+                  font-size: clamp(16px, 2vw, 24px);
+                  margin-bottom: 12px;
+                }
+                .discount-price {
+                  font-size: 16px;
+                }
+              }
+              .arrow-up-right {
+                font-size: 28px;
+              }
+            }
+            .round-plus {
+              align-self: center;
+              margin: 0 2% 0 1%;
+            }
+          }
+        }
+      }
+
+      .pagination {
+        text-align: center;
+        margin-top: 32px;
+        iconify-icon[class^="arrow"] {
+          color: $textSecondary;
+          vertical-align: middle;
+          cursor: pointer;
+
+          &:hover {
+            color: $textPrimary;
+          }
+        }
+        .btn {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          padding: 0;
+          line-height: 40px;
+          border-radius: 50%;
+          border: none;
+          color: $textSecondary;
+          background-color: $grayColor20;
+          background-image: none;
+          cursor: pointer;
+          &.active {
+            background-color: $primaryColor50;
+            color: $textInvert;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #product-block {
+    .content {
+      flex-direction: column;
+      gap: 32px;
+
+      .category {
+        
+        width: 100%;
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .label {
+          width: 100%;
+        }
+        .btn {
+          width: min(100%, 150px);
+        }
+      }
+
+      .card-list {
+        .card-wrapper {
+          &.grid {
+            gap: 16px;
+            .default-card {
+              width: calc(100% / 2 - 8px);
+            }
+          }
+          &.list {
+            .default-card {
+              height: 160px;
+              .card-info {
+                .desc {
+                  .bodyEmphasis {
+                    margin-bottom: 4px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #product-block {
+    .content {
+      .category {
+        .btn {
+          width: min(100%, 120px);
+        }
+      }
+      .card-list {
+        .card-wrapper {
+          &.grid {
+            .default-card {
+              width: 100%;
+            }
+          }
+          &.list {
+            .default-card {
+              height: 120px;
+              .card-info {
+                padding: 16px;
+                .arrow-up-right {
+                  display: none;
+                }
+              }
+              .round-plus {
+                align-self: center;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

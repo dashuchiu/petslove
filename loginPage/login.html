@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>登入 | PETSLOVE</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="./css/styleLogin.css" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <!-- nav -->
+    <div id="nav-placeholder" style="height: 160px"></div>
+
+    <!-- login -->
+    <section id="login-block">
+      <h3 class="title">歡迎</h3>
+      <p class="body">會員可以查看購物訂單以及捐款紀錄</p>
+      <ul class="mode-group">
+        <li class="mode-item">
+          <input type="radio" name="mode" id="signin" checked />
+          <label for="signin">登入</label>
+          <div class="switch"></div>
+        </li>
+        <li class="mode-item">
+          <input type="radio" name="mode" id="signup" />
+          <label for="signup">註冊</label>
+        </li>
+      </ul>
+      <!-- signin-block -->
+      <div id="signin-block">
+        <form class="sigin-form">
+          <input class="ipt" type="email" name="email" placeholder="郵件" />
+          <input
+            class="ipt"
+            type="password"
+            name="password"
+            placeholder="密碼"
+          />
+          <div class="label">忘記密碼?</div>
+          <button class="btn primary">送出</button>
+        </form>
+        <div class="label divider">或使用以下方式登入</div>
+        <button type="button" class="btn third-party">
+          <iconify-icon
+            icon="flat-color-icons:google"
+            width="24"
+            height="24"
+            class="google"
+          ></iconify-icon>
+          <span class="label">使用Google登入</span>
+        </button>
+      </div>
+
+      <!-- signup-block -->
+      <div id="signup-block" class="d-lg-none">
+        <form class="signup-form">
+          <input class="ipt" type="text" name="email" placeholder="姓名" />
+          <input class="ipt" type="text" name="tel" placeholder="電話" />
+          <input class="ipt" type="email" name="email" placeholder="郵件" />
+          <input
+            class="ipt"
+            type="password"
+            name="password"
+            placeholder="密碼"
+          />
+          <button type="button" class="btn primary">送出</button>
+        </form>
+        <span class="label"
+          >註冊即表示您已閱讀並同意 <span class="link-term">服務條款</span> 及
+          <span class="link-term">隱私權政策</span></span
+        >
+      </div>
+    </section>
+  </body>
+  <script src="https://code.iconify.design/iconify-icon/1.0.8/iconify-icon.min.js"></script>
+  <script type="module" src="./js/scriptLogin.js"></script>
+</html>

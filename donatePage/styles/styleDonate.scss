@@ -1,0 +1,179 @@
+@use "../../styles/base" as *;
+@use "../../layout/styles/nav" as *;
+@use "../../layout/styles/footer" as *;
+
+.title-group {
+  margin-bottom: 24px;
+  .subTitle {
+    color: $textPrimary;
+  }
+  .body {
+    color: $textSecondary;
+  }
+}
+
+#donate-block {
+  margin-bottom: 64px;
+  .donate-methods {
+    
+    display: flex;
+    gap: 32px;
+    .btn {
+      width: min(90%, 400px);
+      padding: 12px;
+      text-align: center;
+      color: $textInvert;
+      border: none;
+      &:nth-child(1) {
+        background-color: #a2dcf9;
+      }
+      &:nth-child(2) {
+        background-color: #ed9f7d;
+      }
+      &:nth-child(3) {
+        background-color: #15a33b;
+      }
+      .donate-icon {
+        font-size: 24px;
+        vertical-align: middle;
+        margin-right: 4px;
+        &.atm {
+          color: #bc1b09;
+        }
+      }
+    }
+  }
+}
+
+#donate-feed {
+  .card-list {
+    
+    width: 100%;
+    .card-wrapper {
+      &.grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 28px;
+        .default-card {
+          width: calc(100% / 4 - 21px);
+          .card-info {
+            flex-direction: column;
+            .desc {
+              display: flex;
+              justify-content: space-between;
+              .subTitle {
+                color: $textInvert;
+              }
+              .memo {
+                height: 1lh;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+            }
+            .progressbar {
+              background-image: conic-gradient(
+                $grayWhite 65%,
+                $primaryColor40 0%
+              );
+              width: max(60%, 100px);
+              aspect-ratio: 1 / 1;
+              border-radius: 50%;
+              margin: 12px auto;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+
+              &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 95%;
+                height: 95%;
+                background-color: $primaryColor50;
+                border-radius: 50%;
+              }
+              & > * {
+                z-index: 9;
+              }
+              .label {
+                font-size: clamp(10px, 1.5vw, 14px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .pagination {
+      text-align: center;
+      margin: 64px 0;
+      iconify-icon[class^="arrow"] {
+        color: $textSecondary;
+        vertical-align: middle;
+        cursor: pointer;
+
+        &:hover {
+          color: $textPrimary;
+        }
+      }
+      .btn {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+        border-radius: 50%;
+        border: none;
+        color: $textSecondary;
+        background-color: $grayColor20;
+        background-image: none;
+        cursor: pointer;
+        &.active {
+          background-color: $primaryColor50;
+          color: $textInvert;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #donate-block {
+    .donate-methods {
+      flex-direction: column;
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  #donate-feed {
+    .card-list {
+      .card-wrapper {
+        &.grid {
+          .default-card {
+            width: calc(100% / 2 - 14px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  #donate-feed {
+    .card-list {
+      .card-wrapper {
+        &.grid {
+          .default-card {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
