@@ -1,5 +1,5 @@
 import { initNav } from "../../layout/js/nav.js";
-
+import { loading } from "../../utils/utils.js";
 async function loadHTML(selector, url) {
   const res = await fetch(url);
   const html = await res.text();
@@ -33,3 +33,6 @@ btnSubmit.addEventListener("click", () => {
   player.stop(); // 先停止
   player.play(); // 再播放
 });
+
+
+loading();

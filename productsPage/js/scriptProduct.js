@@ -1,5 +1,5 @@
 import { initNav } from "../../layout/js/nav.js";
-import { loadSpinner } from "../../utils/utils.js";
+import { loading } from "../../utils/utils.js";
 
 
 async function loadHTML(selector, url) {
@@ -30,5 +30,4 @@ switchArea.addEventListener("click", (e) => {
   }
 });
 
-const imgs = document.querySelectorAll(".card-wrapper img");
-loadSpinner(imgs);
+loading();

@@ -1,5 +1,5 @@
 import { initNav } from "../../layout/js/nav.js";
-
+import { loading } from "../../utils/utils.js";
 async function loadHTML(selector, url) {
   const res = await fetch(url);
   const html = await res.text();
@@ -20,3 +20,5 @@ modeGroup.addEventListener("change", () => {
   signin_block.classList.toggle("d-lg-none", !isLogin);
   signup_block.classList.toggle("d-lg-none", isLogin);
 });
+
+loading();

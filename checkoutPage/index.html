@@ -4,12 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>結帳 | PETSLOVE</title>
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="../css/reset.css" />
     <link rel="stylesheet" href="./css/styleCheckout.css" />
   </head>
   <body>
+    <div class="loader"></div>
+
     <!-- nav -->
-    <div id="nav-placeholder" style="height: 160px;"></div>
+    <div id="nav-placeholder" style="height: 160px"></div>
 
     <!-- checkout-list -->
     <section id="cart-block" class="container">
@@ -73,10 +80,10 @@
     <!-- receiver block -->
     <form id="receiver-block" class="container">
       <h3 class="subTitle">收件地址</h3>
-      <input type="text" class="ipt" placeholder="收件姓名">
-      <input type="tel" class="ipt" placeholder="手機號碼">
-      <input type="email" class="ipt" placeholder="聯絡信箱">
-      <input type="text" class="ipt" placeholder="收件地址">
+      <input type="text" class="ipt" placeholder="收件姓名" />
+      <input type="tel" class="ipt" placeholder="手機號碼" />
+      <input type="email" class="ipt" placeholder="聯絡信箱" />
+      <input type="text" class="ipt" placeholder="收件地址" />
       <button type="button" class="btn primary">確定付款</button>
     </form>
 

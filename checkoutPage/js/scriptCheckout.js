@@ -1,5 +1,5 @@
 import { initNav } from "../../layout/js/nav.js";
-
+import { loading } from "../../utils/utils.js";
 async function loadHTML(selector, url) {
   const res = await fetch(url);
   const html = await res.text();
@@ -10,3 +10,5 @@ loadHTML("#nav-placeholder", "../../layout/nav.html").then(() => {
   initNav();
 });
 loadHTML("#footer-placeholder", "../../layout/footer.html");
+
+loading();

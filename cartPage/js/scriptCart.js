@@ -1,5 +1,5 @@
 import { initNav } from "../../layout/js/nav.js";
-
+import { loading } from "../../utils/utils.js";
 async function loadHTML(selector, url) {
   const res = await fetch(url);
   const html = await res.text();
@@ -21,3 +21,5 @@ const btnClose = document.querySelector(".modal .close");
 btnClose.addEventListener("click", () => {
   document.querySelector(".modal").classList.add("d-none");
 });
+
+loading();
