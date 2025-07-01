@@ -1,12 +1,12 @@
 @font-face {
   font-family: "GenJyuuGothic-P";
-  src: url("/assets/fonts/GenJyuuGothic-P-Regular.ttf");
+  src: url("/assets/fonts/GenJyuuGothic-P-Regular.woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "GenJyuuGothic-P";
-  src: url("/assets/fonts/GenJyuuGothic-P-Bold.ttf");
+  src: url("/assets/fonts/GenJyuuGothic-P-Bold.woff2");
   font-weight: 700;
   font-style: normal;
 }
